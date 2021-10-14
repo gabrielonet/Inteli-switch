@@ -21,44 +21,42 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             serialPort1.Open();
-           
-        }
-        private void serial_send(int val)
-        {
-          
-            var message = "rx.val=" + val;
-            serialPort1.Write(message);
-            serialPort1.Write(new byte[] { 0xFF, 0xFF, 0xFF }, 0, 3);
             serialPort1.Write("execute_rx.en=1");
             serialPort1.Write(new byte[] { 0xFF, 0xFF, 0xFF }, 0, 3);
-            
+
         }
+ 
 
 
         private void button1_Click(object sender, EventArgs e)
         {
-          
-            var message = "va0.val=101";
-            serialPort1.Write(message);
+            serialPort1.Write("rx.txt=\"101\"");
             serialPort1.Write(new byte[] { 0xFF, 0xFF, 0xFF }, 0, 3);
-           
+            serialPort1.Write("execute_rx.en=1");
+            serialPort1.Write(new byte[] { 0xFF, 0xFF, 0xFF }, 0, 3);
+      
+
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var message = "va0.val=102";
-            serialPort1.Write(message);
+            serialPort1.Write("rx.txt=\"102\"");
             serialPort1.Write(new byte[] { 0xFF, 0xFF, 0xFF }, 0, 3);
+            serialPort1.Write("execute_rx.en=1");
+            serialPort1.Write(new byte[] { 0xFF, 0xFF, 0xFF }, 0, 3);
+     
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
 
-            var message = "va0.val=103";
-            serialPort1.Write(message);
+            serialPort1.Write("rx.txt=\"103\"");
             serialPort1.Write(new byte[] { 0xFF, 0xFF, 0xFF }, 0, 3);
+            serialPort1.Write("execute_rx.en=1");
+            serialPort1.Write(new byte[] { 0xFF, 0xFF, 0xFF }, 0, 3);
+     
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -68,59 +66,100 @@ namespace WindowsFormsApp1
 
         private void button4_Click(object sender, EventArgs e)
         {
-            serial_send(4);
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            label1.Text =  "cacat";
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            serial_send(6);
         }
 
         private void serialPort1_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
         {
-            x++;
-            message = serialPort1.ReadExisting();
-            
-
+           message = serialPort1.ReadExisting();
+          
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
            
-            label1.Text = message.ToString();
-            if(message=="101")
+ 
+            if (message == "101")
             {
-                button1.Text = "101";
-                button1.BackColor = Color.Red;
-                button2.BackColor = Color.Green;
-                button3.BackColor = Color.Green;
+                button1.BackgroundImage = Properties.Resources.btn2green;
+                button2.BackgroundImage = Properties.Resources.btn2;
+                button3.BackgroundImage = Properties.Resources.btn2;
             }
+
             if (message == "102")
             {
-                button1.Text = "102";
-                button1.BackColor = Color.Green;
-                button2.BackColor = Color.Red;
-                button3.BackColor = Color.Green;
+                button1.BackgroundImage = Properties.Resources.btn2;
+                button2.BackgroundImage = Properties.Resources.btn2green;
+                button3.BackgroundImage = Properties.Resources.btn2;
             }
             if (message == "103")
             {
-                button1.Text = "103";
-                button1.BackColor = Color.Green;
-                button2.BackColor = Color.Green;
-                button3.BackColor = Color.Red;
+                button1.BackgroundImage = Properties.Resources.btn2;
+                button2.BackgroundImage = Properties.Resources.btn2;
+                button3.BackgroundImage = Properties.Resources.btn2green;
             }
-            
 
+        }
+
+       
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            serialPort1.Write("rx.txt=\"101\"");
+            serialPort1.Write(new byte[] { 0xFF, 0xFF, 0xFF }, 0, 3);
+            serialPort1.Write("execute_rx.en=1");
+            serialPort1.Write(new byte[] { 0xFF, 0xFF, 0xFF }, 0, 3);
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            serialPort1.Write("rx.txt=\"102\"");
+            serialPort1.Write(new byte[] { 0xFF, 0xFF, 0xFF }, 0, 3);
+            serialPort1.Write("execute_rx.en=1");
+            serialPort1.Write(new byte[] { 0xFF, 0xFF, 0xFF }, 0, 3);
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            serialPort1.Write("rx.txt=\"103\"");
+            serialPort1.Write(new byte[] { 0xFF, 0xFF, 0xFF }, 0, 3);
+            serialPort1.Write("execute_rx.en=1");
+            serialPort1.Write(new byte[] { 0xFF, 0xFF, 0xFF }, 0, 3);
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            serialPort1.Write("rx.txt=\"101\"");
+            serialPort1.Write(new byte[] { 0xFF, 0xFF, 0xFF }, 0, 3);
+            serialPort1.Write("execute_rx.en=1");
+            serialPort1.Write(new byte[] { 0xFF, 0xFF, 0xFF }, 0, 3);
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            serialPort1.Write("rx.txt=\"101\"");
+            serialPort1.Write(new byte[] { 0xFF, 0xFF, 0xFF }, 0, 3);
+            serialPort1.Write("execute_rx.en=1");
+            serialPort1.Write(new byte[] { 0xFF, 0xFF, 0xFF }, 0, 3);
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            serialPort1.Write("rx.txt=\"101\"");
+            serialPort1.Write(new byte[] { 0xFF, 0xFF, 0xFF }, 0, 3);
+            serialPort1.Write("execute_rx.en=1");
+            serialPort1.Write(new byte[] { 0xFF, 0xFF, 0xFF }, 0, 3);
         }
     }
 }
