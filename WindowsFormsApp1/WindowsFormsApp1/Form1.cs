@@ -7,23 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO.Ports;
 
 namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
-
-
         int x = 0;
         string message = "init" ;
 
         public Form1()
         {
             InitializeComponent();
-            serialPort1.Open();
-            serialPort1.Write("execute_rx.en=1");
-            serialPort1.Write(new byte[] { 0xFF, 0xFF, 0xFF }, 0, 3);
+            
 
+                    //serialPort1.PortName = ports.ToString();
+                    serialPort1.PortName = "COM5";
+                    serialPort1.Open();
+                    serialPort1.Write("execute_rx.en=1");
+                    serialPort1.Write(new byte[] { 0xFF, 0xFF, 0xFF }, 0, 3);
+               
+           
         }
  
 

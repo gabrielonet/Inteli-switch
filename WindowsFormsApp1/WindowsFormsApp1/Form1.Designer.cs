@@ -40,27 +40,29 @@ namespace WindowsFormsApp1
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // serialPort1
             // 
             this.serialPort1.PortName = "COM5";
+            this.serialPort1.ReadTimeout = 30;
             this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 1;
+            this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // button1
             // 
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(82, 160);
+            this.button1.Location = new System.Drawing.Point(43, 52);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(152, 101);
+            this.button1.Size = new System.Drawing.Size(143, 100);
             this.button1.TabIndex = 17;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -69,11 +71,11 @@ namespace WindowsFormsApp1
             // button2
             // 
             this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(241, 160);
+            this.button2.Location = new System.Drawing.Point(183, 52);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(152, 101);
+            this.button2.Size = new System.Drawing.Size(143, 100);
             this.button2.TabIndex = 18;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
@@ -82,11 +84,11 @@ namespace WindowsFormsApp1
             // button3
             // 
             this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(400, 160);
+            this.button3.Location = new System.Drawing.Point(323, 52);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(152, 101);
+            this.button3.Size = new System.Drawing.Size(143, 100);
             this.button3.TabIndex = 19;
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
@@ -95,11 +97,11 @@ namespace WindowsFormsApp1
             // button4
             // 
             this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(559, 160);
+            this.button4.Location = new System.Drawing.Point(43, 169);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(152, 101);
+            this.button4.Size = new System.Drawing.Size(143, 100);
             this.button4.TabIndex = 20;
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = true;
@@ -108,11 +110,11 @@ namespace WindowsFormsApp1
             // button5
             // 
             this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(718, 160);
+            this.button5.Location = new System.Drawing.Point(183, 169);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(152, 101);
+            this.button5.Size = new System.Drawing.Size(143, 100);
             this.button5.TabIndex = 21;
             this.button5.Text = "button5";
             this.button5.UseVisualStyleBackColor = true;
@@ -121,15 +123,23 @@ namespace WindowsFormsApp1
             // button6
             // 
             this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(877, 160);
+            this.button6.Location = new System.Drawing.Point(323, 169);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(152, 101);
+            this.button6.Size = new System.Drawing.Size(143, 100);
             this.button6.TabIndex = 22;
             this.button6.Text = "button6";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click_1);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(523, 93);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 23;
             // 
             // Form1
             // 
@@ -138,7 +148,8 @@ namespace WindowsFormsApp1
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.fundal;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1089, 704);
+            this.ClientSize = new System.Drawing.Size(719, 483);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -166,6 +177,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
