@@ -73,16 +73,6 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap btn2all {
-            get {
-                object obj = ResourceManager.GetObject("btn2all", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap btn2green {
             get {
                 object obj = ResourceManager.GetObject("btn2green", resourceCulture);
@@ -93,9 +83,9 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap btn2red {
+        internal static System.Drawing.Bitmap fundal {
             get {
-                object obj = ResourceManager.GetObject("btn2red", resourceCulture);
+                object obj = ResourceManager.GetObject("fundal", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +93,19 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap fundal {
+        internal static System.Drawing.Bitmap gui_edit_icon_157165 {
             get {
-                object obj = ResourceManager.GetObject("fundal", resourceCulture);
+                object obj = ResourceManager.GetObject("gui_edit_icon_157165", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap r7t2op6sf8426kg97et7e7147i_b11f631a42f051315038c22692012d75 {
+            get {
+                object obj = ResourceManager.GetObject("r7t2op6sf8426kg97et7e7147i-b11f631a42f051315038c22692012d75", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

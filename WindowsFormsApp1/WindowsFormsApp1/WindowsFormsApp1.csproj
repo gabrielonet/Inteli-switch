@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -67,7 +68,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="App1.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -88,10 +88,10 @@
     <None Include="Resources\btn2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\btn2all.png" />
+    <None Include="Resources\r7t2op6sf8426kg97et7e7147i-b11f631a42f051315038c22692012d75.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\btn2red.png" />
+    <None Include="Resources\gui_edit_icon_157165.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
