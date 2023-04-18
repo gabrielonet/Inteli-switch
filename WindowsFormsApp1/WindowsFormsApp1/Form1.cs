@@ -26,10 +26,6 @@ namespace WindowsFormsApp1
             ports = SerialPort.GetPortNames();
             comboBox1.Items.AddRange((object[])ports);
             comboBox1.BackColor = Color.Red;
-
-
-
-            
         }  
 
         private void button1_Click(object sender, EventArgs e)
@@ -77,7 +73,6 @@ namespace WindowsFormsApp1
         {
             message = serialPort1.ReadByte().ToString();
             Shit(message);
-               
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -88,7 +83,6 @@ namespace WindowsFormsApp1
         {
 
             Form1.CheckForIllegalCrossThreadCalls = false;
-            textBox1.Text = cacat;
             if (cacat == "49")
             {
                 button1.BackgroundImage = Properties.Resources.btn2green;
@@ -111,11 +105,8 @@ namespace WindowsFormsApp1
         }
 
 
-
         private void timer1_Tick(object sender, EventArgs e)
         {
-           
-            
             timer1.Enabled = false;
         }
 
@@ -222,7 +213,10 @@ namespace WindowsFormsApp1
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
+        }
 
+        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
+        {
         }
     }
 
